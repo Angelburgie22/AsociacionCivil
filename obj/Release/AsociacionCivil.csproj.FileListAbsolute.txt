@@ -1,0 +1,4 @@
+C:\Users\cheez\Desktop\AsociacionCivil\obj\Release\AsociacionCivil.csproj.AssemblyReference.cache
+C:\Users\cheez\Desktop\AsociacionCivil\obj\Release\AsociacionCivil.LoginForm.resources
+C:\Users\cheez\Desktop\AsociacionCivil\obj\Release\AsociacionCivil.Form2.resources
+C:\Users\cheez\Desktop\AsociacionCivil\obj\Release\AsociacionCivil.csproj.GenerateResource.cache

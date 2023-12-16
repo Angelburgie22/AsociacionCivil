@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{517AD655-D215-471B-9414-DDCA8B67DD13}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AsociacionCivil</RootNamespace>
+    <AssemblyName>AsociacionCivil</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer, Version=2.14.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>packages\Humanizer.Core.2.14.1\lib\netstandard2.0\Humanizer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="asociacioncivilDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>asociacioncivilDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CityItem.cs" />
+    <Compile Include="EmailCredentials.cs" />
+    <Compile Include="EmailDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailDetails.Designer.cs">
+      <DependentUpon>EmailDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSender.cs" />
+    <Compile Include="ExcelCreator.cs" />
+    <Compile Include="GenerateImage.cs" />
+    <Compile Include="GeneratePDF.cs" />
+    <Compile Include="GenerateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateReport.Designer.cs">
+      <DependentUpon>GenerateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs" />
+    <Compile Include="Partner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Partner.Designer.cs">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnerDetail.cs" />
+    <Compile Include="PartnerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartnerDetails.Designer.cs">
+      <DependentUpon>PartnerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnerItem.cs" />
+    <Compile Include="Period.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Period.Designer.cs">
+      <DependentUpon>Period.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriodItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptDetail.cs" />
+    <Compile Include="ReceiptReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptReport.Designer.cs">
+      <DependentUpon>ReceiptReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterAdmin.Designer.cs">
+      <DependentUpon>RegisterAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterPartner.Designer.cs">
+      <DependentUpon>RegisterPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterPeriod.Designer.cs">
+      <DependentUpon>RegisterPeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterReceipt.Designer.cs">
+      <DependentUpon>RegisterReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterUser.Designer.cs">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAdmin.Designer.cs">
+      <DependentUpon>UpdateAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePartner.Designer.cs">
+      <DependentUpon>UpdatePartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateReceipt.Designer.cs">
+      <DependentUpon>UpdateReceipt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailDetails.resx">
+      <DependentUpon>EmailDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateReport.resx">
+      <DependentUpon>GenerateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Partner.resx">
+      <DependentUpon>Partner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartnerDetails.resx">
+      <DependentUpon>PartnerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Period.resx">
+      <DependentUpon>Period.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptReport.resx">
+      <DependentUpon>ReceiptReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterAdmin.resx">
+      <DependentUpon>RegisterAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterPartner.resx">
+      <DependentUpon>RegisterPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterPeriod.resx">
+      <DependentUpon>RegisterPeriod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterReceipt.resx">
+      <DependentUpon>RegisterReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterUser.resx">
+      <DependentUpon>RegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAdmin.resx">
+      <DependentUpon>UpdateAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePartner.resx">
+      <DependentUpon>UpdatePartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateReceipt.resx">
+      <DependentUpon>UpdateReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="asociacioncivilDataSet1.xsc">
+      <DependentUpon>asociacioncivilDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="asociacioncivilDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>asociacioncivilDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="asociacioncivilDataSet1.xss">
+      <DependentUpon>asociacioncivilDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\memes.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
